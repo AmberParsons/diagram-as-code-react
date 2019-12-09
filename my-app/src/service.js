@@ -1,17 +1,14 @@
-class Service {
-    constructor(label, image, position, count = 1){
+export class Service {
+    constructor(label, count = 1){
         this.label = label;
-        this.image = image;
-        this.position = position;
         this.id = count;
         this.edges = [];
 
-        window.diagram.add(this);
+        this.nodeInfo = { label: this.label, id: this.id };
     }
 
     talksTo(otherService) {
+        console.log('Adding an edge!')
         this.edges.push({ from: this.id, to: otherService.id})
     }
 }
-
-module.exports = Service;
