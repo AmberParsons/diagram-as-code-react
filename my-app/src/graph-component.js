@@ -13,8 +13,27 @@ export class Graph extends Component {
     componentDidMount() {
         this.edges = new DataSet(this.edges);
         this.nodes = new DataSet(this.nodes);
-        this.network = new Network(this.appRef.current, { edges: this.edges, nodes: this.nodes }, {});
-        window.scrollTo(0, 0)
+        this.network = new Network(this.appRef.current, { edges: this.edges, nodes: this.nodes }, 
+        { 
+            height: '500px',
+            width: '500px', 
+            edges: {
+                arrows: {
+                    to: {
+                        enabled: true,
+                        imageHeight: undefined,
+                        imageWidth: undefined,
+                        scaleFactor: 1,
+                        src: undefined,
+                        type: "arrow"
+                    }
+                }
+            }, 
+            nodes: { 
+                shape: "box"
+            } 
+        }
+        );
     }
 
     render() {
