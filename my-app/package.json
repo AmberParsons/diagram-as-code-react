@@ -5,7 +5,7 @@
   "dependencies": {
     "eslint": "^6.7.2",
     "keycharm": "^0.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "ramda": "^0.26.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
